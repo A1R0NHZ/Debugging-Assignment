@@ -7,21 +7,21 @@ mindmap
   root((Data Pre-Processing))
     Data Cleaning
       Handle Missing Values
-        Mean Imputation
+        Replace with Mean
       Remove Outliers
-        IQR Method
+        Interquartile Range (IQR) Method
       Remove Duplicates
       Final Clean Data
     Feature Scaling
       Min-Max Normalization
-        Suitable for SVM, KNN
+        For SVM, KNN
       Standardization
-        Suitable for Logistic Regression
+        For Logistic Regression
     Feature Selection
       Correlation Matrix
-        Remove Highly Correlated Features
+        Eliminate Highly Correlated Features
       Recursive Feature Elimination (RFE)
-        Select Important Features
+        Retain Most Relevant Features
     Data Augmentation
       Noise Injection
       Time Shifting
@@ -31,4 +31,4 @@ mindmap
       Training Set (80%)
       Test Set (20%)
       Z-Score Normalization
-        Applied for Deep Learning Models
+        For Deep Learning Models
