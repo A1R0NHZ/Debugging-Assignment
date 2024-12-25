@@ -1,4 +1,7 @@
-graph TD
+# Training Process Diagram
+
+```mermaid
+flowchart TD
     A[Data Splitting] --> B[Training Dataset (70%)]
     A --> C[Validation Dataset (15%)]
     A --> D[Test Dataset (15%)]
