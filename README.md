@@ -1,5 +1,4 @@
 # Training Process Diagram
-
  ```mermaid
 graph TD
     A[Model Selection] --> B[Machine Learning Models]
@@ -28,4 +27,3 @@ graph TD
     I --> I1[Designed for sequential data]
     I --> I2[Captures long-range dependencies]
     I --> I3[Effective for time-series tasks]
-
