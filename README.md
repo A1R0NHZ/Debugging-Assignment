@@ -1,37 +1,31 @@
 # Training Process Diagram
 
-```mermaid
-flowchart TD
-    A[Data Splitting] --> B[Training Dataset (70%)]
-    A --> C[Validation Dataset (15%)]
-    A --> D[Test Dataset (15%)]
+ ```mermaid
+graph TD
+    A[Model Selection] --> B[Machine Learning Models]
+    A --> C[Deep Learning Models]
+    B --> D[Random Forest (RF)]
+    B --> E[Support Vector Machine (SVM)]
+    B --> F[K-Nearest Neighbors (KNN)]
+    B --> G[Logistic Regression]
+    D --> D1[Handles high-dimensional data]
+    D --> D2[Robust to noise]
+    D --> D3[Provides feature importance]
+    E --> E1[Effective for linear/non-linear classification]
+    E --> E2[Uses kernel functions]
+    E --> E3[Suitable for small datasets]
+    F --> F1[Non-parametric method]
+    F --> F2[Flexible and interpretable]
+    F --> F3[Computationally expensive for large datasets]
+    G --> G1[Baseline model]
+    G --> G2[Computationally efficient]
+    G --> G3[Probabilistic interpretation]
+    C --> H[Deep Neural Networks (DNN)]
+    C --> I[Recurrent Neural Networks (LSTM)]
+    H --> H1[Learns hierarchical features]
+    H --> H2[Models non-linear relationships]
+    H --> H3[Requires large datasets]
+    I --> I1[Designed for sequential data]
+    I --> I2[Captures long-range dependencies]
+    I --> I3[Effective for time-series tasks]
 
-    B --> E[Model Training for Traditional ML Models]
-    E --> F[Random Forest]
-    E --> G[Support Vector Machine (SVM)]
-    E --> H[K-Nearest Neighbors (KNN)]
-    E --> I[Logistic Regression]
-
-    B --> J[Model Training for Deep Learning Models]
-    J --> K[Deep Neural Network (DNN)]
-    J --> L[Recurrent Neural Network (LSTM)]
-
-    F --> M[Hyperparameter Tuning: n_estimators, max_depth]
-    G --> N[Kernel Selection, C, Gamma Tuning]
-    H --> O[Hyperparameter Tuning: n_neighbors, Distance Metric]
-    I --> P[Hyperparameter Tuning: C (Regularization Strength)]
-
-    K --> Q[Hyperparameter Tuning: Hidden Layers, Activation Function]
-    L --> R[Hyperparameter Tuning: LSTM Units, Learning Rate]
-
-    B --> S[Training Configuration]
-    S --> T[Learning Rate Decay]
-    S --> U[Batch Size: 32 for DNN/LSTM]
-    S --> V[Early Stopping for DNN/LSTM]
-
-    T --> W[Stabilize Convergence]
-    V --> X[Prevent Overfitting]
-
-    B --> Y[Computational Resources]
-    Y --> Z[CPU-based Systems]
-    Z --> AA[Training Time: SVM (minutes), DNN/LSTM (hours)]
